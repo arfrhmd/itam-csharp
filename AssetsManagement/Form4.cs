@@ -81,8 +81,6 @@ namespace AssetsManagement
                     {
                         bitmap.Save(saveFileDialog1.FileName, ImageFormat.Png);
                     }
-
-                    MessageBox.Show("QRCode berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -104,6 +102,7 @@ namespace AssetsManagement
             try
             {
                 ReadDataForQR("save", txtKodeBarang.Text);
+                MessageBox.Show("QRCode berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex )
             {
