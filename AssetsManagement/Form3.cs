@@ -63,6 +63,7 @@ namespace AssetsManagement
                     koneksi.ExecuteQuery($"DELETE FROM asset WHERE kode_barang='{kode}'");
                     koneksi.CloseConnection();
                     TampilData();
+                    MessageBox.Show($"Data dengan kode barang \"{kode}\" berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
