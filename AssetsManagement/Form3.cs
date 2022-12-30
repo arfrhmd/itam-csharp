@@ -41,7 +41,7 @@ namespace AssetsManagement
         {
             if (txtKodeBarang.Text != "" && txtKodeBarang.TextLength == 8)
             {
-                string kode = this.kodeBarang;
+                string kode = txtKodeBarang.Text;
                 tableData.DataSource = koneksi.ShowInDataGrid($"SELECT * FROM asset WHERE kode_barang='{kode}'");
                 btnDelete.Enabled = true;
             }
